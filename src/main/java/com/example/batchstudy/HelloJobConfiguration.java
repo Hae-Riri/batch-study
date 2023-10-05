@@ -39,6 +39,7 @@ public class HelloJobConfiguration {
                         return RepeatStatus.FINISHED;
                     }
                 })
+                .allowStartIfComplete(true)
                 .build();
     }
     public Step helloStep2() {
@@ -49,6 +50,7 @@ public class HelloJobConfiguration {
                     System.out.println(" ============================");
                     return RepeatStatus.FINISHED;
                 })
+                .allowStartIfComplete(true)
                 .build();
     }
 }
